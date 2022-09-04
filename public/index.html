@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>icon.ico">
+    <title> Adria Taxi Pula</title>
+  </head>
+  <body> 
+   <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script src="https://kit.fontawesome.com/b2d688d9f6.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script> src="https://maps.googleapis.com/maps/apis/js?libraries=places&key=AIzaSyCwZlc5i5cEJ00sCQ2Vhu-aVhBGVzVRIaQ"</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("b9GkgRuD0hv4C7nIj");
+   })();
+</script>
+  </body>
+</html>
