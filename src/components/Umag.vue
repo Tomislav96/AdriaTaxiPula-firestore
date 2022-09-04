@@ -90,7 +90,8 @@
 </div>
 </template>
 <script>
-import emailjs from '@emailjs/browser';
+import {db} from "@/firebase.js";
+import {addDoc, collection} from "firebase/firestore";
 import Swal from "sweetalert2";
 
 export default {
@@ -114,12 +115,20 @@ export default {
         };
     },
     methods: {
-        sendEmail(evt) {
+         sendEmail(evt) {
             evt.preventDefault();
-            emailjs.sendForm('service_20kjgh2', 'template_eb3h3om', this.$refs.form,
-            'b9GkgRuD0hv4C7nIj'),
+            addDoc(collection(db, "Pula-->Umag"),{
+          name: this.form.name,
+          date: this.form.date,
+          phone: this.form.phone,
+          tip: this.selected,
+          message: this.form.message,
+          taxi_price: this.form.taxi_price
+
+          
+            }).then
                 Swal.fire("Good job!","success");
-                this.$bvModal.hide("modal-4");
+                this.$bvModal.hide("modal-2");
                
      
     },

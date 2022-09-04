@@ -102,6 +102,7 @@ export default {
           { value: 'a', text: 'Regular 4 passengers' },
           { value: 'b', text: 'Van up to 8 passengers (900 HRK)' },
         ],
+          taxi: "",
             form: {
                 name: "",
                 date: "",
@@ -116,13 +117,13 @@ export default {
     methods: {
         sendEmail(evt) {
             evt.preventDefault();
-            addDoc(collection(db, "Porec"),{
-          name: this.name,
-          date: this.date,
-          phone: this.phone,
+            addDoc(collection(db, "Pula-->Porec"),{
+          name: this.form.name,
+          date: this.form.date,
+          phone: this.form.phone,
           tip: this.selected,
-          message: this.message,
-          taxi_price: this.taxi_price
+          message: this.form.message,
+          taxi_price: this.form.taxi_price
 
           
             }).then

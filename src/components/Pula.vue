@@ -116,13 +116,13 @@ export default {
     methods: {
        sendEmail(evt) {
             evt.preventDefault();
-            addDoc(collection(db, "Pula"),{
-          name: this.name,
-          date: this.date,
-          phone: this.phone,
+            addDoc(collection(db, "Aerodrom-->Pula"),{
+          name: this.form.name,
+          date: this.form.date,
+          phone: this.form.phone,
           tip: this.selected,
-          message: this.message,
-          taxi_price: this.taxi_price
+          message: this.form.message,
+          taxi_price: this.form.taxi_price
 
           
             }).then
